@@ -1,0 +1,38 @@
+<project>
+    <name>vprofile</name>
+    <environment>development</environment>
+    <deploy>true</deploy>
+
+    <database>
+        <host>localhost</host>
+        <port>3306</port>
+        <name>vprofile_db</name>
+        <user>db_user</user>
+        <password>db_password</password>
+    </database>
+
+    <server>
+        <url>http://localhost:8080/vprofile</url>
+    </server>
+
+    <logging>
+        <level>INFO</level>
+        <file>logs/vprofile.log</file>
+    </logging>
+
+    <cache>
+        <enabled>true</enabled>
+        <type>memcached</type>
+        <host>127.0.0.1</host>
+        <port>11211</port>
+    </cache>
+
+    <messaging>
+        <enabled>true</enabled>
+        <type>rabbitmq</type>
+        <host>localhost</host>
+        <port>5672</port>
+        <queue>vprofile_queue</queue>
+    </messaging>
+</project>
+
